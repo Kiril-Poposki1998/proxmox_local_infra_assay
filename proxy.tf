@@ -1,11 +1,12 @@
 resource "proxmox_vm_qemu" "proxy" {
-  target_node      = "poposki"
-  memory           = 1024
-  name             = "Proxy"
-  numa             = false
-  onboot           = true
-  iso              = "local:iso/alpine-standard-3.16.2-x86_64.iso"
-  ipconfig0 = var.ip_config
+  target_node = "poposki"
+  memory      = 1024
+  name        = "Proxy"
+  numa        = false
+  onboot      = true
+  iso         = "local:iso/alpine-standard-3.16.2-x86_64.iso"
+  ipconfig0   = var.ip_config
+  qemu_os     = "other"
 
   disk {
     backup             = false
