@@ -10,6 +10,14 @@ variable "pass" {
   type = string
 }
 
-variable "ip_config" {
+variable "proxy_ip_config" {
+  type = string
+}
+
+variable "vm_pass" {
+  type = string 
+}
+
+variable "public_key" {
   type = string
 }
