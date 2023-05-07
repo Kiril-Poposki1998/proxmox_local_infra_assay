@@ -14,6 +14,10 @@ variable "proxy_ip_config" {
   type = string
 }
 
+variable "hosting_ip_config" {
+  type = string
+}
+
 variable "vm_pass" {
   type = string 
 }

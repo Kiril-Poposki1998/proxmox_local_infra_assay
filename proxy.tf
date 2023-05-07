@@ -1,7 +1,8 @@
 resource "proxmox_vm_qemu" "proxy" {
   target_node = "poposki"
   name        = "Proxy"
-
+   
+  vmid = 110
   cores = 2
   sockets = 1
   cpu = "host"
@@ -13,7 +14,7 @@ resource "proxmox_vm_qemu" "proxy" {
     format             = "raw"
     size               = "25G"
     storage            = "local-lvm"
-    type               = "scsi"
+    type               = "virtio"
   }
 
   network {
@@ -21,7 +22,7 @@ resource "proxmox_vm_qemu" "proxy" {
     model     = "virtio"
   }
 
-  clone = "ubuntu-cloud"
+  clone = "ubuntu-init"
   os_type = "cloud_init"
   ipconfig0   = var.proxy_ip_config
   nameserver = "1.1.1.1"
