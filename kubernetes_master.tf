@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "master_node" {
   cores   = 2
   sockets = 1
   cpu     = "host"
-  memory  = 1024
+  memory  = 2048
 
 
   disk {

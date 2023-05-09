@@ -3,7 +3,7 @@ resource "proxmox_vm_qemu" "worker1_node" {
   target_node = "poposki"
   vmid        = 101
 
-  memory = 1024
+  memory = 2048
   cores  = 2
   cpu    = "host"
 
@@ -34,7 +34,7 @@ resource "proxmox_vm_qemu" "worker2_node" {
   target_node = "poposki"
   vmid        = 102
 
-  memory = 1024
+  memory = 2048
   cores  = 2
   cpu    = "host"
 
