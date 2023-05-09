@@ -17,3 +17,7 @@
   become: yes
   roles:
     - role: k3s/node
+
+- hosts: master
+  roles:
+    - role: get_kube_config

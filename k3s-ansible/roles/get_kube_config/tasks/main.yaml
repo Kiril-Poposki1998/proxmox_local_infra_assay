@@ -1,0 +1,6 @@
+---
+- name: Get the kube config
+  ansible.builtin.synchronize:
+    src: ~/.kube/config
+    dest: ~/.kube/config
+    mode: pull
