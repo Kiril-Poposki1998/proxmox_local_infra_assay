@@ -11,6 +11,7 @@ cp -R inventory/sample inventory/my-cluster
 ```
 ansible-playbook k3s-ansible/site.yml -i k3s-ansible/inventory/my-cluster/hosts.ini
 ```
+> :warning: <b> This replaces your kube configuration in your home folder</b>
 ### Store the kubeconfig on your .kube directory
 ```
 ssh <master_ip> "cat ~/.kube/config"
